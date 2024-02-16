@@ -11,6 +11,7 @@
     ../../modules/home/xdg.nix
     ../../modules/home/apps.nix
     ../../modules/home/hypr.nix
+    ../../modules/home/vim.nix
   ];
 
   programs.home-manager.enable = true;

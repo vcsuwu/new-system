@@ -63,6 +63,9 @@
     git
   ];
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "vocus" ];
+
   programs.zsh.enable = true;
   programs.hyprland = {
     enable = true;
