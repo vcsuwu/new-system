@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
@@ -39,4 +39,11 @@
     };
     shellIntegration.enableZshIntegration = true;
   };
+
+	programs.tmux = {
+		enable = true;
+		clock24 = true;
+		escapeTime = 0;
+		shell = "${pkgs.zsh}/bin/zsh";
+	};
 }

@@ -13,6 +13,7 @@
     dunst
     grim
     slurp
+		swaybg
 
     # Fonts
     noto-fonts
