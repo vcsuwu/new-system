@@ -1,11 +1,11 @@
-{ self, pkgs, inputs, ...}:
+{ inputs, ...}:
 {
   imports = [ inputs.nixvim.homeManagerModules.nixvim ];
 
   programs.nixvim = {
     enable = true;
 		globals.mapleader = " ";
-    colorschemes.catppuccin = {
+    colorschemes.rose-pine = {
       enable = true;
       transparentBackground = true;
     };
@@ -27,7 +27,6 @@
 				servers = {
 					tsserver.enable = true; # javascript & typescript
 					nil_ls.enable = true; # nix programming language
-					hls.enable = true; # haskell
 				};
 			};
 		};

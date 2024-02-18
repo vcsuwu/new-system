@@ -9,9 +9,21 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ata_piix" "usb_storage" "sd_mod" "sdhci_pci" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "i915" ];
   boot.kernelModules = [ "kvm-intel" ];
+	boot.kernelParams = [
+      # fixes brightness keys, see https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_T430s
+      ''acpi_osi="!Windows 2012"''
+  ];
   boot.extraModulePackages = [ ];
+	hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c90c4080-11ea-48a1-8627-a0a4ef5f7734";

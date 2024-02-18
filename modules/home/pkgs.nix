@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     firefox
     kitty
+		tor-browser
     rofi-wayland
     vesktop
     keepassxc

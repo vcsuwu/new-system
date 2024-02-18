@@ -45,7 +45,7 @@
   users.users.vocus = {
     isNormalUser = true;
     description = "vocus";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     shell = pkgs.zsh;
   };
 
@@ -66,6 +66,7 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "vocus" ];
 
+	programs.adb.enable = true;
   programs.zsh.enable = true;
   programs.hyprland = {
     enable = true;
