@@ -9,6 +9,8 @@
     vesktop
     keepassxc
     zathura
+		mpv
+		telegram-desktop
 
     # For hyprland
     dunst

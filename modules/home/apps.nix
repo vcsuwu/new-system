@@ -36,9 +36,27 @@
       foreground = "#ffffff";
       background_opacity = "0.8";
       window_padding_width = 5;
+			disable_ligatures = "always";
     };
     shellIntegration.enableZshIntegration = true;
   };
+
+  # programs.alacritty = {
+  # 	enable = true;
+  # 	settings = {
+  # 		window.opacity = 0.8;
+  # 		window.padding = {
+  # 			x = 10;
+  # 			y = 10;
+  # 		};
+  # 		font.normal.family = "JetBrainsMono Nerd Font Mono";
+  # 		font.size = 12;
+  # 		colors.primary = {
+  # 			foreground = "#ffffff";
+  # 			background = "#000000";
+  # 		};
+  # 	};
+  # };
 
 	programs.tmux = {
 		enable = true;

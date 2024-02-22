@@ -35,11 +35,12 @@
 			"$mod" = "SUPER";
 			bind =
 				[
-				"$mod SHIFT, C, killactive"
+					"$mod SHIFT, C, killactive"
 					"$mod, Return, exec, kitty"
 					"$mod, R, exec, rofi -show drun"
 					"$mod SHIFT, Q, exit"
 					"$mod, TAB, workspace, previous"
+					"$mod, M, fullscreen, 0"
 				] ++ (
 						builtins.concatLists (builtins.genList (
 								x: let
